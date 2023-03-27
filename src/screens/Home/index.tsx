@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, TextInput, View, TouchableOpacity } from 'react-native';
+import { Text, TextInput, View, TouchableOpacity, ScrollView } from 'react-native';
 import { Participant } from '../../components/Participant';
 import { styles } from './styles';
 
 export function Home() {
+    const participants = ['Jeferson', 'Izabel', 'Maicon', 'Miguel', 'Jeferson 1', 'Izabel 1', 'Maicon 1', 'Miguel 1', 'Jeferson 2', 'Izabel 2']
     function handleParticipantAdd() {
         console.log("handleParticipantAdd");
     }
@@ -23,9 +24,14 @@ export function Home() {
                     <Text style={styles.buttonText}>+</Text>
                 </TouchableOpacity>
             </View>
-            <Participant name="Jeferson" onRemove={() => handleParticipantRemove('Jeferson')} />
-            <Participant name="Carvalho" onRemove={() => handleParticipantRemove('Carvalho')} />
-            <Participant name="Willian" onRemove={() => handleParticipantRemove('Willian')} />
+            <ScrollView showsVerticalScrollIndicator={false}>
+                {
+                    participants.map(participant => (
+                        <Participant key={participant} name={participant} onRemove={() => handleParticipantRemove('Jeferson')} />
+                    ))
+                }
+            </ScrollView>
+
         </View>
 
     );
