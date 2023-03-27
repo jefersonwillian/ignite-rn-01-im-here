@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, TextInput, View, TouchableOpacity, ScrollView } from 'react-native';
+import { Text, TextInput, View, TouchableOpacity, FlatList } from 'react-native';
 import { Participant } from '../../components/Participant';
 import { styles } from './styles';
 
@@ -24,13 +24,21 @@ export function Home() {
                     <Text style={styles.buttonText}>+</Text>
                 </TouchableOpacity>
             </View>
-            <ScrollView showsVerticalScrollIndicator={false}>
-                {
-                    participants.map(participant => (
-                        <Participant key={participant} name={participant} onRemove={() => handleParticipantRemove('Jeferson')} />
-                    ))
-                }
-            </ScrollView>
+            <FlatList
+                data={participants}
+                keyExtractor={item => item}
+                renderItem={({ item }) => (
+                    <Participant key={item} name={item} onRemove={() => handleParticipantRemove('Jeferson')} />
+                )}
+                showsVerticalScrollIndicator={false}
+                ListEmptyComponent={() => (
+                    <Text style={styles.listEmptyText}>
+                        Ninguém chegou no evento ainda? Adicione participantes a sua lista de presença.
+                    </Text>
+                )}
+            />
+
+
 
         </View>
 
