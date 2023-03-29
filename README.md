@@ -12,7 +12,11 @@
 
 Before you start, make sure you have the React Native environment set up on your machine.
 
-Clone the repository: git clone https://github.com/your-user/iamhere-reactnative.git
+Clone the repository: 
+
+```bash
+git clone https://github.com/your-user/iamhere-reactnative.git
+```
 
 Enter the project folder:
 
