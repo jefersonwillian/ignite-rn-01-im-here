@@ -13,8 +13,12 @@
 Before you start, make sure you have the React Native environment set up on your machine.
 
 Clone the repository: git clone https://github.com/your-user/iamhere-reactnative.git
-Enter the project folder: cd iamhere-reactnative
 
+Enter the project folder:
+
+```bash
+ cd iamhere-reactnative
+```
 Install the dependencies:
 
 ```bash
@@ -67,4 +71,4 @@ This project is licensed under the MIT license. See the LICENSE file for more de
 
 ## Author
 
-I Am Here was developed by Jeferson Carvalho.
+`I Am Here` was developed by Jeferson Carvalho.
