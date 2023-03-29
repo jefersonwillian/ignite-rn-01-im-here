@@ -15,7 +15,7 @@ Before you start, make sure you have the React Native environment set up on your
 Clone the repository: 
 
 ```bash
-git clone https://github.com/your-user/iamhere-reactnative.git
+git clone https://github.com/jefersonwillian/ignite-rn-01-im-here.git
 ```
 
 Enter the project folder:
